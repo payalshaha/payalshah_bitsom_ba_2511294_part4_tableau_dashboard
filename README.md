@@ -272,6 +272,281 @@ Key findings from the dashboard include:
 
 ---
 
+# Chart Selection Justification
+
+## Overview
+
+The Executive Sales Performance Dashboard was designed to help leadership monitor sales, profitability, customer behavior, shipping performance, discount effectiveness, and return patterns. Each chart was selected based on the business question it answers and follows data visualization best practices to ensure clarity, accuracy, and actionable insights.
+
+---
+
+# 1. Sales Trend View
+
+## What Question Does This Chart Answer?
+
+How are sales changing over time, and are there any growth or seasonal trends?
+
+## Why Is This Chart Type Appropriate?
+
+A line chart is the most effective way to visualize changes over time because it clearly shows trends, patterns, growth periods, and declines.
+
+## Fields Used
+
+- Columns: Order Date (Month/Year)
+- Rows: Sales
+- Filters: Region, Category, Customer Segment, Date
+
+## Design Principle Applied
+
+A continuous timeline helps users quickly identify sales trends and seasonal fluctuations.
+
+## Mistake Avoided
+
+Avoided using pie charts or stacked bar charts, which make trend analysis difficult.
+
+---
+
+# 2. Regional Performance View
+
+## What Question Does This Chart Answer?
+
+Which regions contribute the most sales and profit?
+
+## Why Is This Chart Type Appropriate?
+
+A horizontal bar chart provides a clear comparison between regions and allows easy ranking of performance.
+
+## Fields Used
+
+- Rows: Region
+- Columns: Sales
+- Color: Profit
+- Filters: Category, Customer Segment
+
+## Design Principle Applied
+
+Regions were sorted in descending order to immediately highlight top-performing and underperforming areas.
+
+## Mistake Avoided
+
+Avoided unsorted charts and overly complex maps that could reduce readability.
+
+---
+
+# 3. Category Profitability View
+
+## What Question Does This Chart Answer?
+
+Which product categories and sub-categories generate the highest profit and which generate losses?
+
+## Why Is This Chart Type Appropriate?
+
+Bar charts provide accurate comparisons of profitability across multiple categories and clearly show differences in performance.
+
+## Fields Used
+
+- Rows: Category / Sub-Category
+- Columns: Profit
+- Color: Category
+- Filters: Region, Customer Segment
+
+## Design Principle Applied
+
+Consistent category colors and descending sorting improve readability and comparison.
+
+## Mistake Avoided
+
+Avoided treemaps because exact profit differences are easier to compare using bars.
+
+---
+
+# 4. Customer Segment View
+
+## What Question Does This Chart Answer?
+
+How do customer segments compare in terms of sales and profitability?
+
+## Why Is This Chart Type Appropriate?
+
+Bar charts allow straightforward comparison of performance across customer segments.
+
+## Fields Used
+
+- Columns: Customer Segment
+- Rows: Sales
+- Label: Profit
+- Filters: Region, Category
+
+## Design Principle Applied
+
+Simple layout and clear labels support quick executive-level interpretation.
+
+## Mistake Avoided
+
+Avoided 3D charts and excessive color variation that could distract from the comparison.
+
+---
+
+# 5. Shipping Performance View
+
+## What Question Does This Chart Answer?
+
+Which shipping methods experience the longest delivery times and delays?
+
+## Why Is This Chart Type Appropriate?
+
+A bar chart clearly compares average delivery times across shipping modes and highlights operational performance differences.
+
+## Fields Used
+
+- Rows: Ship Mode
+- Columns: Average Delivery Days
+- Color: Shipping Delay Bucket
+- Filters: Region, Category
+
+## Design Principle Applied
+
+Delay categories are color-coded to help users quickly identify shipping performance issues.
+
+## Mistake Avoided
+
+Avoided displaying only raw tables because visual comparisons are easier and faster with charts.
+
+---
+
+# 6. Discount vs Profit View
+
+## What Question Does This Chart Answer?
+
+How does discounting affect profitability?
+
+## Why Is This Chart Type Appropriate?
+
+A scatter plot is ideal for examining relationships between two numerical variables and identifying trends, clusters, and outliers.
+
+## Fields Used
+
+- Columns: Discount
+- Rows: Profit
+- Color: Category
+- Detail: Order ID
+- Filters: Region, Customer Segment
+
+## Design Principle Applied
+
+Each point represents a transaction, allowing users to observe how increasing discounts affect profit outcomes.
+
+## Mistake Avoided
+
+Avoided line charts because discount values are not sequential time-based data.
+
+---
+
+# 7. Return Analysis View
+
+## What Question Does This Chart Answer?
+
+Which categories, regions, or customer segments have the highest return rates?
+
+## Why Is This Chart Type Appropriate?
+
+A bar chart provides a clear comparison of return rates and highlights areas with elevated return risk.
+
+## Fields Used
+
+- Rows: Category (or Region/Segment)
+- Columns: Return Rate
+- Color: Return Rate
+- Label: Return Rate Percentage
+- Filters: Region, Customer Segment
+
+## Design Principle Applied
+
+Return rates are displayed as percentages and sorted from highest to lowest to emphasize risk areas.
+
+## Mistake Avoided
+
+Avoided pie charts because small differences in return rates are difficult to compare accurately.
+
+---
+
+# Dashboard-Level Visualization Design Principles
+
+## Correct Chart Selection
+
+Each visualization was chosen based on the business question being answered. Trend analysis uses line charts, comparisons use bar charts, and relationship analysis uses scatter plots.
+
+## Clear Hierarchy
+
+The dashboard places KPI cards at the top, followed by trend analysis, performance comparisons, and operational insights. This structure allows leadership to review key metrics before exploring detailed analysis.
+
+## Minimal Clutter
+
+Unnecessary gridlines, excessive labels, and decorative elements were removed to keep the focus on business insights.
+
+## Consistent Color Usage
+
+The dashboard follows a consistent color scheme:
+
+- Sales Metrics: Blue
+- Profit Metrics: Green
+- Losses: Red
+- Return Metrics: Orange
+- Shipping Delay Categories: Consistent delay-based colors
+
+This improves readability and reduces confusion.
+
+## Proper Labels
+
+All charts include meaningful axis labels, category labels, and metric names. Labels are displayed only where they improve interpretation.
+
+## Readable Titles
+
+Each worksheet uses descriptive business-friendly titles such as:
+
+- Monthly Sales Trend
+- Regional Performance Analysis
+- Category Profitability Analysis
+- Customer Segment Performance
+- Shipping Performance Analysis
+- Discount vs Profit Relationship
+- Return Rate Analysis
+
+## Appropriate Sorting
+
+Charts are sorted to improve readability:
+
+- Regions sorted by sales
+- Categories sorted by profit
+- Return rates sorted highest to lowest
+- Customer segments sorted by sales contribution
+
+## Useful Filters
+
+The dashboard includes interactive filters for:
+
+- Region
+- Category
+- Customer Segment
+- Ship Mode
+- Order Date
+- Campaign Channel
+
+These filters allow users to analyze performance from multiple perspectives.
+
+## Avoidance of Misleading Scales
+
+The dashboard avoids common visualization problems by:
+
+- Not using 3D charts
+- Avoiding distorted axes
+- Formatting percentage metrics correctly
+- Using consistent scales across comparable charts
+
+## Focus on Business Interpretation
+
+The dashboard was designed to support decision-making rather than simply display data. Each visualization helps leadership identify growth opportunities, profitability drivers, customer behavior patterns, operational challenges, and business risks.
+
 # Dashboard Story Summary
 
 The dashboard reveals a business that generates strong sales across multiple markets while facing profitability challenges linked to discounting practices, shipping delays, and return behavior.
